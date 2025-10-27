@@ -22,9 +22,9 @@ const closeBtn = document.querySelector(".modal-close");
 seeMoreButtons.forEach(button => {
   button.addEventListener("click", () => {
     const card = button.closest(".card");
-    const clone = card.cloneNode(true); // copy card content
+    const clone = card.cloneNode(true); 
 
-    // remove button inside modal (optional)
+    // remove button inside modal
     const btnInside = clone.querySelector(".see-more");
     if (btnInside) btnInside.remove();
 
@@ -37,7 +37,7 @@ seeMoreButtons.forEach(button => {
     modalBody.innerHTML = ""; // clear previous
     modalBody.appendChild(clone);
 
-    modal.style.display = "flex"; // show modal
+    modal.style.display = "flex"; // show modal clear
   });
 });
 
@@ -63,4 +63,5 @@ window.addEventListener('scroll', () => {
     header.classList.remove('blurred');
   }
 });
+
 
